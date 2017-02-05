@@ -444,7 +444,9 @@ Custom property | Description | Default
         for (var i = 0; i < sliSel.length; i++) {
           sliSel[i].setAttribute("inert", "")
         }
-        sliSel[this.position].removeAttribute("inert");
+         if (sliSel[this.position]) {
+          sliSel[this.position].removeAttribute("inert");
+        }
       },
       /**
       * Method for moving
